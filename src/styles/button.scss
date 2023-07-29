@@ -1,0 +1,39 @@
+.primary-button {
+  background-color: #4682a9;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  outline: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.outlined-button {
+  background-color: transparent;
+  border: 1px solid #4682a9;
+  box-sizing: border-box;
+  color: #4682a9;
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  outline: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: linear 0.2s all;
+  &:hover {
+    background-color: #4682a9;
+    border: 1px solid #4682a9;
+    box-sizing: border-box;
+    color: #ffffff;
+  }
+}

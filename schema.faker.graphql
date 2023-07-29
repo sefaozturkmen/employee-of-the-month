@@ -1,0 +1,43 @@
+type Query {
+  employee(id: ID!): EmployeeDetail
+  employeeList: [Employee] @listLength(min: 5, max: 20)
+}
+
+type Employee {
+  id: ID!
+  firstName: String! @fake(type: firstName)
+  lastName: String! @fake(type: lastName)
+  photo: String @examples(values: ["https://leafac.github.io/fake-avatars/avatars/webp/1.webp", "https://leafac.github.io/fake-avatars/avatars/webp/2.webp", "https://leafac.github.io/fake-avatars/avatars/webp/3.webp", "https://leafac.github.io/fake-avatars/avatars/webp/4.webp", "https://leafac.github.io/fake-avatars/avatars/webp/5.webp", "https://leafac.github.io/fake-avatars/avatars/webp/6.webp", "https://leafac.github.io/fake-avatars/avatars/webp/7.webp", "https://leafac.github.io/fake-avatars/avatars/webp/8.webp", "https://leafac.github.io/fake-avatars/avatars/webp/9.webp"])
+  jobTitle: String! @fake(type: jobTitle)
+  department: String
+    @examples(
+      values: [
+        "İnsan Kaynakları"
+        "Finans Ekibi"
+        "Yazılım Ekibi"
+        "ARGE Ekibi"
+      ]
+    )
+  count: Int @fake(type: number, options: { minNumber: 0, maxNumber: 10 })
+}
+
+type EmployeeDetail {
+  id: ID!
+  firstName: String! @fake(type: firstName)
+  lastName: String! @fake(type: lastName)
+  photo: String @examples(values: ["https://leafac.github.io/fake-avatars/avatars/webp/1.webp", "https://leafac.github.io/fake-avatars/avatars/webp/2.webp", "https://leafac.github.io/fake-avatars/avatars/webp/3.webp", "https://leafac.github.io/fake-avatars/avatars/webp/4.webp", "https://leafac.github.io/fake-avatars/avatars/webp/5.webp", "https://leafac.github.io/fake-avatars/avatars/webp/6.webp", "https://leafac.github.io/fake-avatars/avatars/webp/7.webp", "https://leafac.github.io/fake-avatars/avatars/webp/8.webp", "https://leafac.github.io/fake-avatars/avatars/webp/9.webp"])
+  jobTitle: String! @fake(type: jobTitle)
+  department: String
+    @examples(
+      values: [
+        "İnsan Kaynakları"
+        "Finans Ekibi"
+        "Yazılım Ekibi"
+        "ARGE Ekibi"
+      ]
+    )
+  email: String @fake(type: email)
+  count: Int @fake(type: number, options: { minNumber: 0, maxNumber: 10 })
+  age: Int @examples(values: [20, 25, 30, 35])
+  gender: String @examples(values: ["male", "female"])
+}
