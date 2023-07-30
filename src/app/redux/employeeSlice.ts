@@ -1,5 +1,5 @@
 import { IEmployee, IEmployeeList } from "./../interface/employee";
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { getEmployeeDetailAction, getEmployeesAction } from "./employeeAction";
 
 export interface EmployeeState {

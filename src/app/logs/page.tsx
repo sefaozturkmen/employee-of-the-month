@@ -3,11 +3,8 @@
 import { formatDate, getLogs } from "@/utils";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-export interface LogData {
-  timestamp: string;
-  event: string;
-  message: string;
-}
+import { LogData } from "../interface/log";
+
 const logs = () => {
   const [logs, setLogs] = useState<LogData[]>([]);
   useEffect(() => {
