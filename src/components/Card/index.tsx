@@ -4,6 +4,7 @@ import Button from "../Button";
 import { useDispatch } from "react-redux";
 import { increaseCount } from "@/app/redux/employeeSlice";
 import { IEmployeeList } from "@/app/interface/employee";
+import { logEvent } from "@/utils";
 
 export default function Card({
   id,
@@ -17,6 +18,10 @@ export default function Card({
   const dispatch = useDispatch();
 
   const increaseCounts = () => {
+    logEvent(
+      "button_click",
+      `The user voted for an employee with ID ${id} full name ${firstName} ${lastName}.`
+    );
     dispatch(increaseCount(id));
   };
 

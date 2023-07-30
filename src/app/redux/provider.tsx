@@ -5,6 +5,5 @@ import { createStore } from "./store";
 export function StoreProvider({ children, preloadedState }: any) {
   const store = createStore(preloadedState);
 
-  console.log("store", store.getState());
   return <Provider store={store}>{children}</Provider>;
 }
