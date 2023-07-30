@@ -43,7 +43,16 @@ export default function Card({
         <div className="card--body--actions-wrapper">
           <Button text="Oy Ver" onClick={() => increaseCounts()} />
 
-          <Link className="outlined-button" href={`/detail/${id}`}>
+          <Link
+            className="outlined-button"
+            onClick={() =>
+              logEvent(
+                "button_click",
+                `The user viewed the profile of the employee with the id ${id} full name ${firstName} ${lastName}.`
+              )
+            }
+            href={`/detail/${id}`}
+          >
             Kişiye Git
           </Link>
         </div>

@@ -1,0 +1,53 @@
+.employee-detail {
+  border-radius: 8px;
+  margin-top: 12px;
+  &--header {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: center;
+    background-color: #d4e2d4;
+    padding: 16px 0;
+    img {
+      border-radius: 50%;
+    }
+  }
+  &--body {
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+    background-color: #faf3f0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    gap: 12px;
+    &--left,
+    &--right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    &--left {
+      &--name {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      &--title {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      &--department {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+    &--right {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .employee-detail--body {
+    flex-direction: column;
+  }
+}
