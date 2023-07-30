@@ -1,9 +1,0 @@
-{
-    "version": 2,
-    "routes": [
-      {
-        "src": "/graphql",
-        "dest": "node_modules/graphql-faker/lib/index.js"
-      }
-    ]
-  }
